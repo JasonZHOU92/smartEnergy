@@ -1,0 +1,144 @@
+{
+  "contract_name": "SmartEnergy",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "name": "priceInCent",
+          "type": "uint256"
+        }
+      ],
+      "name": "getTotalPrice",
+      "outputs": [
+        {
+          "name": "totalPrice",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "name": "priceInCent",
+          "type": "uint256"
+        },
+        {
+          "name": "dealDate",
+          "type": "uint256"
+        }
+      ],
+      "name": "buy",
+      "outputs": [
+        {
+          "name": "sufficient",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "addr",
+          "type": "address"
+        }
+      ],
+      "name": "getBalanceInEth",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "name": "priceInCent",
+          "type": "uint256"
+        },
+        {
+          "name": "dealDate",
+          "type": "uint256"
+        }
+      ],
+      "name": "sell",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "addr",
+          "type": "address"
+        }
+      ],
+      "name": "getBalance",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "name": "priceInCent",
+          "type": "uint256"
+        },
+        {
+          "name": "dealDate",
+          "type": "uint256"
+        },
+        {
+          "name": "action",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "type": "constructor"
+    }
+  ],
+  "unlinked_binary": "0x606060405234610000576040516080806102d383398101604090815281516020830151918301516060909301519092905b60018054600160a060020a03191633600160a060020a03161790555b505050505b610273806100606000396000f300606060405263ffffffff60e060020a600035041663126a86ea81146100505780631622dbe4146100755780637bd703e8146100ab57806392cdbac5146100d6578063f8b2cb4f146100fa575b610000565b3461000057610063600435602435610125565b60408051918252519081900360200190f35b3461000057610097600160a060020a036004351660243560443560643561012f565b604080519115158252519081900360200190f35b3461000057610063600160a060020a0360043516610187565b60408051918252519081900360200190f35b34610000576100f8600160a060020a0360043516602435604435606435610201565b005b3461000057610063600160a060020a0360043516610228565b60408051918252519081900360200190f35b8181025b92915050565b600160a060020a03841660009081526020819052604081205484840290101561015a5750600061017f565b50600160a060020a038416600090815260208190526040902080548484029003905560015b949350505050565b600073__ConvertLib____________________________6396e4ee3d6101ac84610228565b60026000604051602001526040518363ffffffff1660e060020a028152600401808381526020018281526020019250505060206040518083038186803b156100005760325a03f415610000575050505b919050565b600160a060020a038416600090815260208190526040902080548484020190555b50505050565b600160a060020a0381166000908152602081905260409020545b9190505600a165627a7a723058205332de1c3deba6f02eb546420c0b7ed1f5bf40d1e20187358d067b307eae2f760029",
+  "networks": {},
+  "schema_version": "0.0.5",
+  "updated_at": 1486809017936
+}
