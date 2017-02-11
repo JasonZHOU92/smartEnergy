@@ -1,15 +1,15 @@
-pragma solidity ^0.4.8;
+pragma solidity ^0.4.0;
 import "./ConvertLib.sol";
 
 contract SmartEnergy {
    /* Constructor */
    mapping (address => uint) balances;
    address owner;
-   uint amount;
-   uint priceInCent;
-   uint dealDate;
+   public uint amount;
+   public uint priceInCent;
+   public uint dealDate;
    string greeting;
-   Action action;
+   Action public action;
    enum Action { Buy, Sell} // Enum
 
 
@@ -29,6 +29,7 @@ contract SmartEnergy {
        priceInCent = priceInCent;
        dealDate = dealDate;
        action = action;
+       balances[0] = getBalance(msg.sender);
    }
 
     function getTotalPrice(uint amount, uint priceInCent) returns(uint totalPrice) {
@@ -39,7 +40,12 @@ contract SmartEnergy {
    		ConvertLib.convert(getBalance(addr),2);
    	}
 
-   	function getBalance(address addr) returns(uint) {
+   	function getBalance(address addr) constant returns(uint) {
 		return balances[addr];
 	}
+
+	function debug() returns (string){
+        return "debug";
+    }
+
 }

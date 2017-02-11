@@ -1,0 +1,24 @@
+<html>
+<script type="text/javascript" src="http://rawgit.com/ethereum/web3.js/master/dist/web3.min.js"></script>
+<script>
+    //var Web3 = require('web3');
+    /*    filesystem = require("fs"),
+     BigNumber = require('bignumber.js');*/
+
+    var web3 = new Web3(new Web3.providers.HttpProvider("http://127.0.0.1:8007"));
+
+    var myAccount = web3.eth.accounts[0];
+
+    var address = "0x5e72914535f202659083db3a02c984188fa26e9f";
+
+
+    var abiString = '[{"constant":false,"inputs":[{"name":"amount","type":"uint256"},{"name":"priceInCent","type":"uint256"}],"name":"getTotalPrice","outputs":[{"name":"totalPrice","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"owner","type":"address"},{"name":"amount","type":"uint256"},{"name":"priceInCent","type":"uint256"},{"name":"dealDate","type":"uint256"}],"name":"buy","outputs":[{"name":"sufficient","type":"bool"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"addr","type":"address"}],"name":"getBalanceInEth","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"owner","type":"address"},{"name":"amount","type":"uint256"},{"name":"priceInCent","type":"uint256"},{"name":"dealDate","type":"uint256"}],"name":"sell","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"getAmount","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"addr","type":"address"}],"name":"getBalance","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"inputs":[{"name":"amount","type":"uint256"},{"name":"priceInCent","type":"uint256"},{"name":"dealDate","type":"uint256"},{"name":"action","type":"uint8"}],"payable":false,"type":"constructor"}]';
+    var abi = JSON.parse(abiString);
+    var SmartEnergy = web3.eth.contract(abi);
+    var smartEnergy = SmartEnergy.at(address);
+
+    console.log('totalPrice: ' + smartEnergy.getTotalPrice(1, 3));
+    console.log('amount: ' + smartEnergy.getAmount());
+
+</script>
+</html>
