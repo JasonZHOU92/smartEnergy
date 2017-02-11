@@ -42,8 +42,4 @@ contract SmartEnergy {
    	function getBalance(address addr) returns(uint) {
 		return balances[addr];
 	}
-
-	function getCurrentTimeStamp() return(unit) {
-	    return block.timestamp
-	}
 }
